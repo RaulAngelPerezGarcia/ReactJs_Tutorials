@@ -2,17 +2,26 @@ import React from 'react';
 
 // State function:
 class App extends React.Component {
-  render(){
-    // Can only return 1 element so we put everything under a div
-    return (
-      <div>
-        <h1>Hello worldieron </h1> 
-        <b>Bold</b>
-      </div>
-    )
-  }
+	render(){
+		let txt = this.props.txt
+
+		// Can only return 1 element so we put everything under a div
+		return (
+			<div>
+				<h1>{txt}</h1>
+			</div>
+		)
+	}
 }
 
+App.propTypes = {
+	txt: React.PropTypes.string,
+	cat: React.PropTypes.number.isRequired
+}
+
+App.defaultProps = {
+	txt: "This is the default text"
+}
 
 export default App; 
 

@@ -1,0 +1,15 @@
+{
+  "name": "react_tuts",
+  "version": "1.0.0",
+  "description": "I will finally learn how to use react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "tutorial"
+  ],
+  "author": "Raul Angel Perez Garcia",
+  "license": "ISC"
+}

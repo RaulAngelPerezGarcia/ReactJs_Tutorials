@@ -1,5 +1,26 @@
 import React from 'react';
 
+class App extends React.Component {
+	render(){
+		return <button>I <Heart /> React</button>
+	}
+}
+
+const Button = (props) => <button>{props.children}</button>
+
+class Heart extends React.Component{
+	render(){
+		return <span>&hearts;</span>
+	}
+}
+
+export default App; 
+
+
+
+
+
+/* Tutorial 6 ended here
 // State function:
 class App extends React.Component {
 
@@ -32,7 +53,7 @@ class App extends React.Component {
 
 const Widget = (props) =>
 	<input type="text" name="irrelevant" onChange={props.update} />
-/*
+
 App.propTypes = {
 	txt: React.PropTypes.string,
 	cat: React.PropTypes.number.isRequired
@@ -42,12 +63,6 @@ App.defaultProps = {
 	txt: "This is the default text"
 }
 */
-export default App; 
-
-
-
-
-
 
 // Useful things to remember
 

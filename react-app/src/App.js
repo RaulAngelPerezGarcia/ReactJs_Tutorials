@@ -6,8 +6,7 @@ class App extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			txt: 'This is the state txt',
-			cat: 0
+			txt: 'This is the state txt'
 		}
 	}
 
@@ -20,12 +19,19 @@ class App extends React.Component {
 		// Can only return 1 element so we put everything under a div
 		return (
 			<div>
-				<input type="text" name="irrelevant" onChange={this.update.bind(this)} />
-				<h1>{this.state.txt} - {this.state.cat}</h1>
+				<h1>{this.state.txt}</h1>
+				<Widget update={this.update.bind(this)} />
+				<Widget update={this.update.bind(this)} />
+				<Widget update={this.update.bind(this)} />
+				<Widget update={this.update.bind(this)} />
 			</div>
 		)
 	}
 }
+
+
+const Widget = (props) =>
+	<input type="text" name="irrelevant" onChange={props.update} />
 /*
 App.propTypes = {
 	txt: React.PropTypes.string,

@@ -1,8 +1,37 @@
 import React from 'react';
 
+class App extends React.Component{
+	render(){
+		return <Title text="This is the text"/>
+	}
+}
+
+const Title = (props) => <h1>Title: {props.text} </h1>
+
+Title.propTypes = {
+	text(props, propName, component){
+		//Custom validation for props
+		if(!(propName in props)){
+			return new Error('missing ${propName}')
+		}
+		if(props[propName].length < 6) {
+			return new Error('${propName} was too shorterino')
+		}
+	} //text: React.PropTypes.string
+}
+
+
+export default App; 
+
+
+
+
+
+/* 
+Tutorial 7:
 class App extends React.Component {
 	render(){
-		return <button>I <Heart /> React</button>
+		return <button>    I <Heart /> React</button>
 	}
 }
 
@@ -14,13 +43,7 @@ class Heart extends React.Component{
 	}
 }
 
-export default App; 
-
-
-
-
-
-/* Tutorial 6 ended here
+Tutorial 6 ended here
 // State function:
 class App extends React.Component {
 
